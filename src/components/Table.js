@@ -1,6 +1,6 @@
 const Table = ({ sat }) => {
 
-  let table = sat.map((data, id) => {
+  let satTable = sat.map((data, id) => {
     return (
     <tr key={id}>
       <td>{data.name}</td>
@@ -20,7 +20,7 @@ const Table = ({ sat }) => {
         </tr>
         </thead>
         <tbody>
-          {table}
+          {satTable}
         </tbody>
       </table>
   );
