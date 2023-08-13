@@ -1,14 +1,19 @@
 import satData from "./satData";
 
 const Buttons = ({ displaySats, filterByType, setSat }) => {
+
+  let buttonOne = displaySats.map((sat, id) => {
+    return (
+      <button onClick={() => filterByType(sat)} key={id}>{sat} Orbit</button>
+    )
+  })
+
   return (
     <div className="Buttonz">
-      {displaySats.map((sat, id) => (
-        <button onClick={() => filterByType(sat)} key={id}>{sat} Orbit</button>
-      ))}
-        <button onClick={() => setSat(satData)}>All Orbits</button>          
-      </div>
-    );
+      <>{ buttonOne }</>
+      <button onClick={() => setSat(satData)}>All Orbits</button>
+    </div>
+  );
 };
 
 export default Buttons;
